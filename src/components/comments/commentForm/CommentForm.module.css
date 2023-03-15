@@ -3,14 +3,15 @@
   align-items: center;
   column-gap: 1.875rem;
 }
-/* .commentInfo{
-  display: flex;
-  align-items: flex-end;
-  gap: 1.875rem;
-} */
-.formInner{
+.formInner {
   display: flex;
   flex-direction: column;
+}
+.nameInner {
+  display: flex;
+  justify-content: space-between;
+  width: 40.25rem;
+  margin-bottom: 0.9375rem;
 }
 
 .comment_photo {
@@ -25,8 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 643px;
-  font-family: "Inter";
+  font-family: "Inter", serif;
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -49,6 +49,7 @@
 }
 .textarea {
   width: 43rem;
+  height: 61px;
   padding: 20px 30px 0 30px;
   background: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -66,13 +67,14 @@
   line-height: 1.375rem;
   color: #000000;
   opacity: 0.4;
+  padding: 3px 30px 0 30px;
 }
 .commentInput_btn {
   border-radius: 0.3125rem;
   cursor: pointer;
   border: none;
   padding: 1.25rem 3.6875rem 1.1875rem 3.6875rem;
-  font-family: "Inter";
+  font-family: "Inter", serif;
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -90,7 +92,6 @@
   opacity: 0.4;
 }
 
-
 textarea {
   resize: none;
 }
@@ -101,38 +102,148 @@ textarea {
   column-gap: 1.875rem;
 }
 .checkSymbolsCount {
-  text-align: right;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.0625rem;
   color: #ff0000;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1044px) {
   .form {
     width: 50rem;
+    align-items: baseline;
+  }
+  .nameInner {
+    width: 34.5rem;
   }
 }
 
 @media (max-width: 978px) {
-
+  .nameInner {
+    width: 30.5rem;
+  }
+  .textarea {
+    width: 30.625rem;
+  }
+  .commentInput_btn {
+    padding: 1.25rem 2.6875rem 1.1875rem 2.6875rem;
+  }
 }
 @media (max-width: 768px) {
-
+  .nameInner {
+    width: 35rem;
+  }
+  .form {
+    flex-direction: column;
+    width: 40rem;
+  }
+  .textarea {
+    width: 35rem;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    margin-bottom: 0.9375rem;
+  }
+  .commentInput_btn {
+    width: 35rem;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+  }
+  .checkSymbolsCount {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
 }
 @media (max-width: 480px) {
-
+  .comment_photo {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+  .commentInput {
+    flex-direction: column;
+  }
+  .formInner {
+    width: 26.75rem;
+  }
+  .form {
+    width: 28.75rem;
+  }
+  .textarea {
+    width: 26.75rem;
+  }
+  .commentInput_btn {
+    width: 26.75rem;
+  }
+  .nameInner {
+    position: relative;
+    width: 26.75rem;
+    justify-content: flex-end;
+  }
+  .comment_name {
+    position: absolute;
+    top: -2.5625rem;
+    left: 4.5625rem;
+  }
 }
 
-
-
-
-@media (max-width: 978px) {
-
+@media (max-width: 460px) {
+  .formInner {
+    width: 23.75rem;
+  }
+  .form {
+    width: 23.75rem;
+  }
+  .textarea {
+    width: 23.75rem;
+  }
+  .commentInput_btn {
+    width: 23.75rem;
+  }
+  .nameInner {
+    width: 23.75rem;
+  }
 }
-@media (max-width: 768px) {
-
+@media (max-width: 400px) {
+  .formInner {
+    width: 21.75rem;
+  }
+  .form {
+    width: 21.75rem;
+  }
+  .textarea {
+    width: 21.75rem;
+  }
+  .textarea::placeholder {
+    font-size: 1rem;
+    padding: 0 0.625rem 0.625rem 0.625rem;
+  }
+  .commentInput_btn {
+    width: 21.75rem;
+  }
+  .nameInner {
+    width: 21.75rem;
+  }
 }
-@media (max-width: 480px) {
-
+@media (max-width: 360px) {
+  .comment_name {
+    left: 4.5625rem;
+  }
+  .formInner {
+    width: 17.75rem;
+  }
+  .form {
+    width: 17.75rem;
+  }
+  .textarea {
+    width: 17.75rem;
+  }
+  .textarea::placeholder {
+    font-size: 0.875rem;
+    padding: 0 0.625rem 0.625rem 0.625rem;
+  }
+  .commentInput_btn {
+    width: 17.75rem;
+  }
+  .nameInner {
+    width: 17.75rem;
+  }
 }

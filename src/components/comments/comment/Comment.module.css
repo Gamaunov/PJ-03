@@ -1,8 +1,10 @@
 .commentComplete {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   column-gap: 1.875rem;
   margin-bottom: 1.875rem;
+  margin-left: 5.625rem;
+  position: relative;
 }
 .comment_time {
   font-size: 0.875rem;
@@ -12,6 +14,7 @@
   opacity: 0.4;
   margin-left: 0.9375rem;
 }
+
 .comment_name {
   display: flex;
   align-items: center;
@@ -24,8 +27,8 @@
   margin-bottom: 0.9375rem;
 }
 .comment_text {
-  max-width: 57.25rem;
-  font-family: "Inter";
+  width: 57.25rem;
+  font-family: "Inter", serif;
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -34,17 +37,25 @@
 }
 .comment_photo {
   display: flex;
-  align-self: start;
   width: 3.8125rem;
   height: 3.8125rem;
   border-radius: 50%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: -5.625rem;
 }
 .comment__btns {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   column-gap: 1.25rem;
+  font-family: "Inter", serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #000000;
+  opacity: 0.4;
 }
 .reply {
   display: flex;
@@ -52,13 +63,62 @@
   column-gap: 0.5rem;
   background-color: transparent;
   border: none;
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #000000;
-  opacity: 0.4;
+
   cursor: pointer;
 }
 
-@media (max-width: 1200px) {}
+@media (max-width: 1044px) {
+  .comment_text {
+    width: 51.25rem;
+  }
+}
+@media (max-width: 978px) {
+  .comment_text {
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    width: 39.25rem;
+  }
+  .comment__btns {
+    font-size: 1rem;
+    line-height: 1.1875rem;
+  }
+  .comment_name{
+    width: 15.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .comment_text {
+    width: 28.4375rem;
+  }
+  .commentComplete {
+    margin-left: 0;
+  }
+  .comment_name {
+    margin-bottom: 1.875rem;
+    margin-left: 6.25rem;
+  }
+  .comment_photo {
+      width: 3.125rem;
+      height: 3.125rem;
+    top: -1.25rem;
+    left: 0;
+  }
+}
+@media (max-width: 400px) {
+  .comment_text {
+    width: 21.75rem;
+  }
+}
+@media (max-width: 360px) {
+  .comment_text {
+    width: 18.75rem;
+  }
+  .comment_name {
+    margin-left: 5.3125rem;
+  }
+  .comment__btns {
+    column-gap: .3125rem;
+  }
+}
+@media (max-width: 1200px) {
+}

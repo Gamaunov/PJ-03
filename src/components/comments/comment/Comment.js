@@ -11,13 +11,12 @@ const Comment = ({
   replies,
   setActiveComment,
   activeComment,
-  updateComment,
-  deleteComment,
+  // updateComment,
+  // deleteComment,
   addComment,
   parentId = null,
   currentUserId,
 }) => {
-
   const isReplying =
     activeComment &&
     activeComment.id === comment.id &&
@@ -36,28 +35,26 @@ const Comment = ({
           src={comment.photo ? comment.photo : comment.defaultPhoto}
           alt="It`s me"
         />
-        <div>
-          <div className={s.comment_name}>
-            {comment.username}
-            <span className="comment_time">{createdAt}</span>
-          </div>
-          <div className={s.comment_text}>{comment.body}</div>
-          <div className={s.comment__btns}>
-            <button
-              className={s.reply}
-              onClick={() =>
-                setActiveComment({ id: comment.id, type: "replying" })
-              }
-            >
-              <span>
-                <img src={reply} alt="reply" />
-              </span>
-              Ответить
-            </button>
-            <Favourites favourites={comment.favourites} />
-            <div className="likesInner">
-              <LikeCounter likes={comment.likes} />
-            </div>
+        <div className={s.comment_name}>
+          {comment.username}
+          <span className="comment_time">{createdAt}</span>
+        </div>
+        <div className={s.comment_text}>{comment.body}</div>
+        <div className={s.comment__btns}>
+          <button
+            className={s.reply}
+            onClick={() =>
+              setActiveComment({ id: comment.id, type: "replying" })
+            }
+          >
+            <span>
+              <img src={reply} alt="reply" />
+            </span>
+            Ответить
+          </button>
+          <Favourites favourites={comment.favourites} />
+          <div className="likesInner">
+            <LikeCounter likes={comment.likes} />
           </div>
         </div>
       </div>

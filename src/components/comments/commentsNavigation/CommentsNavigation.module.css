@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   column-gap: 0.75rem;
-  font-family: "Inter";
+  font-family: "Inter", serif;
   font-style: normal;
   font-weight: 500;
   font-size: 1.25rem;
@@ -26,7 +26,7 @@
   display: flex;
   align-items: center;
   column-gap: 0.625rem;
-  font-family: "Inter";
+  font-family: "Inter", serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.1875rem;
@@ -35,35 +35,19 @@
   opacity: 0.4;
   border-bottom: 1px solid #000;
 }
-/* .sort_up_down {
-  width: 0;
-  height: 0;
-  border-left: 0.625rem solid transparent;
-  border-right: 0.625rem solid transparent;
-  border-top: 1.0625rem solid #000;
-} */
 
-.liked {
-}
-.liked_img {
-}
-
-@media (max-width: 978px) {
-
-}
 @media (max-width: 768px) {
   .comments_menu {
     width: 20.875rem;
     gap: 1.3125rem;
   }
   .liked {
-    font-size: .875rem;
+    font-size: 0.875rem;
     line-height: 1.0625rem;
   }
-
-  
-
 }
 @media (max-width: 480px) {
-
+  .comments_menu {
+    width: 18.875rem;
+  }
 }

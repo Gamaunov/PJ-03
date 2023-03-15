@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: space-between;
   width: 44.875rem;
-  font-family: "Inter";
+  font-family: "Inter", serif;
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -28,7 +28,7 @@
   column-gap: 0.5rem;
   background-color: transparent;
   border: none;
-  font-family: "Inter";
+  font-family: "Inter", serif;
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -36,15 +36,18 @@
   opacity: 0.4;
   cursor: pointer;
 }
-.nested_comment_name {
-  font-family: "Inter";
+.reply span {
+  display: flex;
+  align-self: end;
+}
+.name {
+  font-family: "Inter", serif;
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #122ac0;
 }
-.comment_name {
-}
+
 .comment_photo {
   display: flex;
   align-self: start;
@@ -54,7 +57,7 @@
   object-fit: cover;
 }
 .nested_text {
-  max-width: 51.5625rem;
+  width: 51.5625rem;
   font-family: "Inter";
   font-weight: 400;
   font-size: 1.125rem;
@@ -65,4 +68,50 @@
   display: flex;
   align-items: center;
   column-gap: 1.875rem;
+}
+@media (max-width: 1044px) {
+  .nested_text {
+    width: 44.5625rem;
+  }
+}
+@media (max-width: 978px) {
+  .nested_text {
+    width: 34.5625rem;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+  }
+}
+@media (max-width: 480px) {
+  .nested_comment {
+    margin-left: 0;
+    flex-direction: column;
+  }
+  .nested_text {
+    width: 27.5625rem;
+  }
+  .nested_reply {
+    display: flex;
+    position: relative;
+    margin-left: 5.625rem;
+    margin: -40px 0 35px 90px;
+  }
+
+  .reply {
+    position: absolute;
+    top: 1.8125rem;
+    left: -0.375rem;
+  }
+}
+@media (max-width: 460px) {
+  .nested_text {
+    width: 22.5625rem;
+  }
+}
+@media (max-width: 400px) {
+  .nested_text {
+    width: 18.75rem;
+  }
+  .nested_reply {
+    column-gap: 0;
+  }
 }

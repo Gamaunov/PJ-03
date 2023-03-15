@@ -3,13 +3,7 @@ import s from "./CommentForm.module.css";
 import photo_3 from "../../../img/person/p-3.jpg";
 import setInputHeight from "../setInputHeight";
 
-const CommentForm = ({
-  handleSubmit,
-  // submitLabel,
-  // hasCancelButton = false,
-  handleCancel,
-  initialText = "",
-}) => {
+const CommentForm = ({ handleSubmit, handleCancel, initialText = "" }) => {
   const [text, setText] = useState(initialText);
   const isTextareaDisabled = (text.length === 0) | (text.length > 1000);
   const onSubmit = (event) => {
@@ -33,17 +27,19 @@ const CommentForm = ({
       <div className={s.commentInput}>
         <img className={s.comment_photo} src={photo_3} alt="It`s me" />
         <div className={s.formInner}>
-          <div className={s.comment_name}>
-            <span>MyUsername</span>
-          </div>
-          <div className={s.countInner}>
-            <span className={s.commentInput_symbols}>{symbolsCount}</span>
-            <span
-              style={{ display: displayMessage }}
-              className={s.checkSymbolsCount}
-            >
-              Слишком длинное сообщение
-            </span>
+          <div className={s.nameInner}>
+            <div className={s.comment_name}>
+              <span>MyUsername</span>
+            </div>
+            <div className={s.countInner}>
+              <span className={s.commentInput_symbols}>{symbolsCount}</span>
+              <span
+                style={{ display: displayMessage }}
+                className={s.checkSymbolsCount}
+              >
+                Слишком длинное сообщение
+              </span>
+            </div>
           </div>
           <form onSubmit={onSubmit} className={s.form}>
             <textarea
@@ -54,7 +50,7 @@ const CommentForm = ({
                 setSymbolsCount(`${e.target.value.length}/1000`);
                 setText(e.target.value);
                 showMessage(e.target.value.length);
-                setInputHeight(e, "1px");
+                setInputHeight(e, "61px");
               }}
               className={s.textarea}
               placeholder="Введите текст сообщения..."

@@ -15,9 +15,9 @@ const NesstedComment = ({ comment }) => {
       <div className={s.nested_comment}>
         <img className={s.comment_photo} src={comment.photo} alt="It`s me" />
         <div>
-          <div>
+          <div className={s.nameInner}>
             <div className={s.nested_reply}>
-              <div className={s.nested_comment_name}>MyUsername</div>
+              <div className={s.name}>MyUsername</div>
               <button className={s.reply}>
                 <span>
                   <img src={reply} alt="reply" />

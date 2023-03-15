@@ -7,8 +7,10 @@ html {
   box-sizing: inherit;
 }
 
-.App{
-  
+.App {
+  margin: 0 auto;
+  padding: 0 5px;
+  max-width: 1022px;
 }
 
 @font-face {
@@ -34,12 +36,6 @@ html {
   font-weight: 400;
   font-display: swap;
   font-style: italic;
-}
-
-.App {
-  max-width: 1022px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .comment_time {
@@ -75,3 +71,27 @@ html {
   margin-bottom: -2px;
 }
 
+@media (max-width: 978px) {
+  .App{
+    max-width: 978px;
+  }
+  .favourites-btn {
+    font-size: 1rem;
+    line-height: 1.1875rem;
+  }
+}
+@media (max-width: 768px) {
+  .App{
+    max-width: 768px;
+  }
+
+}
+@media (max-width: 480px) {
+  .App{
+    max-width: 480px;
+  }
+  .likesInner{
+    flex-direction: column;
+  }
+
+}

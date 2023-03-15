@@ -1,0 +1,138 @@
+.commentInput {
+  display: flex;
+  align-items: center;
+  column-gap: 1.875rem;
+}
+/* .commentInfo{
+  display: flex;
+  align-items: flex-end;
+  gap: 1.875rem;
+} */
+.formInner{
+  display: flex;
+  flex-direction: column;
+}
+
+.comment_photo {
+  display: flex;
+  align-self: start;
+  width: 3.8125rem;
+  height: 3.8125rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.comment_name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 643px;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #122ac0;
+}
+.commentInput_symbols {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  color: #000000;
+  opacity: 0.4;
+}
+.form {
+  display: flex;
+  align-items: center;
+  column-gap: 1.875rem;
+  width: 55.625rem;
+  margin-bottom: 2.5rem;
+}
+.textarea {
+  width: 43rem;
+  padding: 20px 30px 0 30px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #000000;
+}
+.textarea::placeholder {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #000000;
+  opacity: 0.4;
+}
+.commentInput_btn {
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  border: none;
+  padding: 1.25rem 3.6875rem 1.1875rem 3.6875rem;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #000000;
+  background-color: #abd873;
+  align-self: start;
+}
+
+.commentInput_btn:active {
+  transform: scale(0.9);
+}
+.commentInput_btn:disabled {
+  background-color: #a2a2a2;
+  cursor: default;
+  opacity: 0.4;
+}
+
+
+textarea {
+  resize: none;
+}
+.countInner {
+  display: flex;
+  align-items: center;
+  align-self: end;
+  column-gap: 1.875rem;
+}
+.checkSymbolsCount {
+  text-align: right;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  color: #ff0000;
+}
+
+@media (max-width: 1200px) {
+  .form {
+    width: 50rem;
+  }
+}
+
+@media (max-width: 978px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+}
+
+
+
+
+@media (max-width: 978px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+}

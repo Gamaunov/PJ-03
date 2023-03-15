@@ -1,0 +1,70 @@
+.dropdown {
+  position: relative;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #000000;
+  opacity: 0.4;
+}
+.dropbtn {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(130, 123, 123);
+  cursor: pointer;
+}
+
+.drop_arrow {
+  display: flex;
+  margin-left: 0.3125rem;
+}
+.dropItemsInner {
+  margin-top: 15px;
+  position: absolute;
+  padding: 8px 10px 8px 30px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 100;
+}
+.dropItems {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3125rem;
+  color: #000000;
+  opacity: 0.4;
+}
+.dropItem {
+  position: relative;
+  cursor: pointer;
+}
+.dropItem:hover .checkBox {
+  display: block;
+}
+
+.checkBox {
+  position: absolute;
+  left: -20px;
+  top: 3px;
+  display: none;
+}
+
+@media (max-width: 978px) {
+  .dropdown{
+    font-size: .875rem;
+    line-height: 1.0625rem;
+  }
+
+}
+@media (max-width: 768px) {
+  .drop_img {
+    width: .75rem;
+    height: .75rem;
+}
+
+}
+@media (max-width: 480px) {
+
+}

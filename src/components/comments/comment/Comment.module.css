@@ -1,0 +1,64 @@
+.commentComplete {
+  display: flex;
+  align-items: center;
+  column-gap: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+.comment_time {
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  letter-spacing: 0.01em;
+  color: #000000;
+  opacity: 0.4;
+  margin-left: 0.9375rem;
+}
+.comment_name {
+  display: flex;
+  align-items: center;
+  width: 44.875rem;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #122ac0;
+  margin-bottom: 0.9375rem;
+}
+.comment_text {
+  max-width: 57.25rem;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #000000;
+  margin-bottom: 0.9375rem;
+}
+.comment_photo {
+  display: flex;
+  align-self: start;
+  width: 3.8125rem;
+  height: 3.8125rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.comment__btns {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  column-gap: 1.25rem;
+}
+.reply {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background-color: transparent;
+  border: none;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #000000;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {}

@@ -1,7 +1,7 @@
 import CommentForm from "../commentForm/CommentForm";
 import s from "./Comment.module.css";
 import reply from "../../../img/reply.svg";
-import NesstedComment from "../nestedComment/NesstedComment";
+import NestedComment from "../nestedComment/NestedComment";
 import moment from "moment";
 import LikeCounter from "../likeCounter/LikeCounter";
 import Favourites from "../favourites/Favourites";
@@ -11,8 +11,6 @@ const Comment = ({
   replies,
   setActiveComment,
   activeComment,
-  // updateComment,
-  // deleteComment,
   addComment,
   parentId = null,
   currentUserId,
@@ -60,14 +58,14 @@ const Comment = ({
       </div>
       {isReplying && (
         <CommentForm
-          submitLabel="Отправить"
+          initialText=""
           handleSubmit={(text) => addComment(text, replyId)}
         />
       )}
       {replies.length > 0 && (
         <>
           {replies.map((reply) => (
-            <NesstedComment
+            <NestedComment
               comment={reply}
               key={reply.id}
               replies={[]}

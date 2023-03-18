@@ -3,9 +3,9 @@ import s from "./CommentForm.module.css";
 import photo_3 from "../../../img/person/p-3.jpg";
 import setInputHeight from "../setInputHeight";
 
-const CommentForm = ({ handleSubmit, handleCancel, initialText = "" }) => {
+const CommentForm = ({ handleSubmit, initialText = "" }) => {
   const [text, setText] = useState(initialText);
-  const isTextareaDisabled = (text.length === 0) | (text.length > 1000);
+  const isTextareaDisabled = text.length === 0 || text.length > 1000;
   const onSubmit = (event) => {
     event.preventDefault();
     handleSubmit(text);
@@ -15,7 +15,7 @@ const CommentForm = ({ handleSubmit, handleCancel, initialText = "" }) => {
   const [displayMessage, setDisplayMessage] = useState("none");
 
   const showMessage = (e) => {
-    if (e > 1000) {
+    if (+e > 1000) {
       setDisplayMessage("block");
     } else {
       setDisplayMessage("none");
@@ -56,7 +56,6 @@ const CommentForm = ({ handleSubmit, handleCancel, initialText = "" }) => {
               placeholder="Введите текст сообщения..."
             ></textarea>
             <button
-              onClick={handleCancel}
               className={s.commentInput_btn}
               disabled={isTextareaDisabled}
             >

@@ -1,11 +1,11 @@
 import s from "./CommentsNavigation.module.css";
 import heartCircle from "../../../img/heart-circle.png";
 import DropDown from "../dropDown/DropDown";
-import { useState } from "react";
+import { FC, useState } from "react";
 import { useEffect } from "react";
 import { getComments as getCommentsApi } from "../../../api";
 
-const CommentsNavigation = () => {
+const CommentsNavigation: FC = () => {
   const [commentsCount, setCommentsCount] = useState(0);
   useEffect(() => {
     getCommentsApi().then((data) => {

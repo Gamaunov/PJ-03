@@ -1,28 +1,30 @@
 import s from "./LikeCounter.module.css";
-import { useState } from "react";
+import { FC, useState } from "react";
 
-const LikeCounter = (props) => {
+interface LikeCounterProps {
+  likes: string;
+  likeCount: string;
+}
 
-
-
-  const likesFromApi = props.likes || 0
+const LikeCounter: FC<LikeCounterProps> = (props) => {
+  const likesFromApi = props.likes || 0;
   const [likeCount, setLikeCount] = useState(likesFromApi);
   const increaseLike = () => {
-    setLikeCount(likeCount + 1);
+    setLikeCount(+likeCount + 1);
   };
   const decreaseLike = () => {
-    setLikeCount(likeCount - 1);
+    setLikeCount(+likeCount - 1);
   };
   const [counterColor, setCounterColor] = useState("#8AC540");
 
   localStorage.setItem("like", JSON.stringify(likeCount));
   const changeCounterColorM = () => {
-    if (likeCount - 1 < 0) {
+    if (+likeCount - 1 < 0) {
       setCounterColor("#fb0000");
     }
   };
   const changeCounterColorP = () => {
-    if (likeCount + 1 >= 0) {
+    if (+likeCount + 1 >= 0) {
       setCounterColor("#8AC540");
     }
   };
@@ -38,7 +40,7 @@ const LikeCounter = (props) => {
       >
         -
       </button>
-      <div className={s.count}  style={{ color: counterColor }}>
+      <div className={s.count} style={{ color: counterColor }}>
         {likeCount}
       </div>
       <button

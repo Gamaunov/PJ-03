@@ -34,7 +34,10 @@
   line-height: 1.375rem;
   color: #000000;
   opacity: 0.4;
-  cursor: pointer;
+  transition: color .3s ease-in;
+}
+.reply:hover{
+  color: teal;
 }
 .reply span {
   display: flex;

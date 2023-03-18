@@ -63,7 +63,8 @@
   column-gap: 0.5rem;
   background-color: transparent;
   border: none;
-
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   cursor: pointer;
 }
 

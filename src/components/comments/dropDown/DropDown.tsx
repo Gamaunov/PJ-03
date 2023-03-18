@@ -15,7 +15,11 @@ const DropDown: FC<{
       <button onClick={() => setIsExpanded(!isExpanded)} className={s.dropbtn}>
         По количеству оценок
         <span className={s.drop_arrow}>
-          <img className={s.drop_img} src={isExpanded ? arrowUp : arrowDown} alt="Arrow" />
+          <img
+            className={s.drop_img}
+            src={isExpanded ? arrowUp : arrowDown}
+            alt="Arrow"
+          />
         </span>
       </button>
       {isExpanded && (

@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "@cleverbeagle/fur": "^0.0.26-alpha",
+    "autoprefixer": "^10.4.14",
     "classnames": "^2.3.2"
   }
 }

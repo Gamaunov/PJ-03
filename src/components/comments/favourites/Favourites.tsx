@@ -1,9 +1,8 @@
-import s from "./Favourites.module.css";
 import heart_empty from "../../../img/heart-empty.svg";
 import heart_fill from "../../../img/heart-fill.svg";
-import { useState } from "react";
+import { FC, useState } from "react";
 
-const Favourites = (props) => {
+const Favourites: FC = (props: any) => {
   const backFState = () => {
     if (props.favourites === false) {
       return "В избранное";

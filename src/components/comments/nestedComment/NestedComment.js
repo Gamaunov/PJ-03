@@ -1,10 +1,11 @@
+import React, { FC } from "react";
 import s from "./NestedComment.module.css";
 import reply from "../../../img/reply.svg";
 import moment from "moment";
 import LikeCounter from "../likeCounter/LikeCounter";
 import Favourites from "../favourites/Favourites";
 
-const NesstedComment = ({ comment }) => {
+const NestedComment = ({ comment, replies, currentUserId, parentId }) => {
   const createdAt = `
   ${moment(new Date(comment.createdAt)).format("DD.MM")}   ${moment(
     new Date(comment.createdAt)
@@ -40,4 +41,4 @@ const NesstedComment = ({ comment }) => {
   );
 };
 
-export default NesstedComment;
+export default NestedComment;

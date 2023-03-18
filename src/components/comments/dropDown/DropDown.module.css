@@ -5,13 +5,15 @@
   font-size: 1rem;
   line-height: 1.1875rem;
   color: #000000;
-  opacity: 0.4;
 }
 .dropbtn {
   display: flex;
   align-items: center;
   background: transparent;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   border: none;
+  opacity: 0.4;
   border-bottom: 1px solid rgb(130, 123, 123);
   cursor: pointer;
 }
@@ -21,7 +23,8 @@
   margin-left: 0.3125rem;
 }
 .dropItemsInner {
-  margin-top: 15px;
+  margin-top: 0.9375rem;
+  width: 14.3125rem;
   position: absolute;
   padding: 8px 10px 8px 30px;
   background: #ffffff;

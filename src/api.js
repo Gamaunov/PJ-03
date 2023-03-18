@@ -3,7 +3,6 @@ import photo_2 from "./img/person/p-2.jpg";
 import photo_3 from "./img/person/p-3.jpg";
 import photo_4 from "./img/person/p-4.jpg";
 import photo_5 from "./img/person/p-5.jpg";
-import photo_6 from "./img/person/p-6.jpg";
 import photoDef from "./img/person/user-default.svg";
 
 export const getComments = async () => {
